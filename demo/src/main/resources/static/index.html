@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Student Management System</h2>
+
+<form id="studentForm">
+
+    <!-- Hidden field to store student ID (used only for UPDATE) -->
+    <input type="hidden" id="studentId">
+
+    <input type="text" id="name" placeholder="Student Name" required>
+    <input type="text" id="course" placeholder="Course" required>
+
+    <button type="submit">Save Student</button>
+</form>
+
+<div class = "search" style="padding-bottom: 1.5rem;">
+
+<input style = "margin : auto" type="text"
+        id="searchInput"
+        placeholder="Search by student name..."
+        onkeyup="searchStudent()"
+>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody id="studentTable"></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
